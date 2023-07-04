@@ -1,0 +1,65 @@
+:root {
+  --page-color: #202124;
+  --heading-color: #f1bf2d;
+  --search-color: #525356;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-size: 1.6rem;
+  background-color: var(--page-color);
+}
+
+html,
+body {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+h1 {
+  font-weight: 700;
+  color: var(--heading-color);
+}
+h3,
+p,
+.icon {
+  color: white;
+}
+h3,
+p,
+input,
+textarea,
+a{
+  font-weight: 400;
+}
+p {
+  font-size: 1.35rem;
+}
+h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+textarea {
+  background-color: var(--page-color);
+}
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  border: none;
+}
+input:focus,
+textarea:focus {
+  border: none;
+  outline: none;
+}

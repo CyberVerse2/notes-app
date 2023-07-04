@@ -1,0 +1,47 @@
+.write-section {
+  grid-area: write;
+  display: flex;
+  justify-content: center;
+
+}
+.noteform {
+  width: 40%;
+  /* height: 90%; */
+  border: 1px solid var(--heading-color);
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  border-radius: 0.8rem;
+}
+#title {
+  background-color: var(--page-color);
+  height: 1.9rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#title,
+#description {
+  font-family: "Inter", sans-serif;
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  margin-top: 1.3rem;
+}
+#description {
+  font-size: 1.3rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+.noteform .a {
+  color: white;
+  padding: 0.4rem 4.3rem;
+  margin: 0 1rem 1rem 1rem;
+  text-align: center;
+  border-radius: 4rem;
+  align-self: flex-end;
+  border: 2px solid var(--heading-color);
+  background-color: transparent;
+}
+.a:hover {
+  transition: 0.2s;
+  background-color: var(--heading-color);
+}

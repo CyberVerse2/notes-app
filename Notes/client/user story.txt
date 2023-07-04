@@ -1,0 +1,30 @@
+As a user, I should be able to register an account and login to my account. 
+As a user, I should be able to create new notes with title and description.
+As a user, I should be able to view, edit and delete my created notes.
+As a user, I should be able to search for my notes.
+As a user, I should be able to view my profile and also statistics(coming soon)
+
+Components
+navigation bar
+	logo
+	search bar
+	profile
+writenotes
+notes
+
+Database
+user
+	userid(primary key
+	username
+	email
+	hash
+	
+notes
+	id
+	userid(foreign key)
+	title
+	description
+
+
+client id=1944756186-o2tf6m6pdookc8ujoknqli2joqoquq2q.apps.googleusercontent.com
+secret=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
