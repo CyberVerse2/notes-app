@@ -74,7 +74,7 @@ app.post("/signup", async (req, res) => {
   let { username, email, password } = req.body;
 
   const salt = bcrypt.genSaltSync(10);
-  const hashedPassword = bcrypt.hashSync(password, salt);
+  let hashedPassword = bcrypt.hashSync(password, salt);
   username = username.replace(/"/g, "'");
   email = email.replace(/"/g, "'");
   hashedPassword = hashedPassword.replace(/"/g, "'");
