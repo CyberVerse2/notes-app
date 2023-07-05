@@ -71,11 +71,15 @@ app.delete("/notes/:id", async (req, res) => {
 //signup
 
 app.post("/signup", async (req, res) => {
-  const { username, email, password } = req.body;
+  let { username, email, password } = req.body;
 
   const salt = bcrypt.genSaltSync(10);
   const hashedPassword = bcrypt.hashSync(password, salt);
-  console.log(username, email, hashedPassword)
+  username = username.replace(/"/g, "'");
+  email = email.replace(/"/g, "'");
+  hashedPassword = hashedPassword.replace(/"/g, "'");
+
+  console.log(username, email, hashedPassword);
   try {
     const signUp = await pool.query(
       "INSERT INTO users (username, email, hash) VALUES ($1, $2, $3)",
