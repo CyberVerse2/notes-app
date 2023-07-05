@@ -21,7 +21,7 @@ export default function Auth({setLoginName}) {
 
   const handleSubmit = async function (e, endpoint) {
     e.preventDefault();
-    if (!isLogin && password === confirmPassword) {
+    if (!isLogin && password !== confirmPassword) {
       setError("Make Sure Passwords Match");
     }
 
@@ -46,7 +46,6 @@ export default function Auth({setLoginName}) {
       setCookie("AuthToken", data.token);
       // console.log(data)
       // console.log(data.username)
-      window.location.reload();
       setLoginName(data.username)
     }
   };

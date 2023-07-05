@@ -11,20 +11,24 @@ function App() {
   const [notes, setNotes] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [noteToEdit, setNoteToEdit] = useState({});
-  const [loginName, setLoginName] =useState('')
+  const [loginName, setLoginName] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const email = cookies.Email;
   const authToken = cookies.AuthToken;
 
   const getData = async () => {
     try {
+      setLoading(true)
       const response = await fetch(
         `${import.meta.env.VITE_APP_SERVERURL}/notes/${email}`
       );
       const json = await response.json();
+      setLoading(false)
       setNotes(json);
       // console.log(notes);
     } catch (err) {
+      setLoading(false)
       console.error(err);
     }
   };
@@ -44,11 +48,11 @@ function App() {
           <NoteForm
             email={email}
             getData={getData}
-            notes={notes}
             isEditing={isEditing}
             noteToEdit={noteToEdit}
             setIsEditing={setIsEditing}
           />
+          {loading && <h2>Loading...</h2>}
           <section id="note-section">
             {notes?.map((note) => (
               <Note
