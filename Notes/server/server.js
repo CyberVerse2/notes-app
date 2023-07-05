@@ -1,4 +1,4 @@
-const PORT = process.env.PORT ?? 8000;
+// const PORT = process.env.PORT ?? 8000;
 const express = require("express");
 const { v4: uuidv4 } = require("uuid");
 const pool = require("./db");
@@ -121,4 +121,4 @@ app.get("/", (req, res) => {
   res.send("Notes App is working");
 });
 
-app.listen(PORT, () => console.log(`Server Running on PORT ${PORT}`));
+app.listen(5070, () => console.log(`Server Running on PORT ${5070}`));
