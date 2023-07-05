@@ -75,9 +75,10 @@ app.post("/signup", async (req, res) => {
 
   const salt = bcrypt.genSaltSync(10);
   const hashedPassword = bcrypt.hashSync(password, salt);
+  console.log(username, email, hashedPassword)
   try {
     const signUp = await pool.query(
-      "INSERT INTO users(username, email, hash) VALUES ($1, $2, $3)",
+      "INSERT INTO users (username, email, hash) VALUES ($1, $2, $3)",
       [username, email, hashedPassword]
     );
     const token = jwt.sign({ email }, "secret", { expiresIn: "1hr" });
