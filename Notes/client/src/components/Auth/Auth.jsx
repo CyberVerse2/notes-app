@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCookies } from "react-cookie";
 import "./Auth.css";
 
-export default function Auth({setLoginName}) {
+export default function Auth({ setLoginName }) {
   const [cookies, setCookie, removeCookie] = useCookies(null);
   const [isLogin, setIsLogin] = useState(null);
   const [username, setUsername] = useState("");
@@ -46,7 +46,8 @@ export default function Auth({setLoginName}) {
       setCookie("AuthToken", data.token);
       // console.log(data)
       // console.log(data.username)
-      setLoginName(data.username)
+      setLoginName(data.username);
+      window.location.reload();
     }
   };
 
