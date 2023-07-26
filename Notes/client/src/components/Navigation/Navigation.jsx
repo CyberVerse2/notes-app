@@ -1,5 +1,4 @@
 import { FaSearch } from "react-icons/fa";
-import { MdLogout } from "react-icons/md";
 import { useCookies } from "react-cookie";
 
 import "./Navigation.css";

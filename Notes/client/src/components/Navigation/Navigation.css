@@ -1,4 +1,4 @@
-.parent{
+.parent {
   grid-area: navigation;
 }
 nav {
@@ -37,14 +37,14 @@ nav h1 {
   width: 80%;
   height: 100%;
 }
-.adjust{
+.adjust {
   width: 23%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.adjust>p{
+.adjust > p {
   transition: visiblity 2s;
 }
 #profile {
